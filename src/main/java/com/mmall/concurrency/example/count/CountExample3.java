@@ -21,8 +21,7 @@ public class CountExample3 {
     // 同时并发执行的线程数
     public static int threadTotal = 200;
 
-    //public static int count = 0;
-    public static LongAdder count = new LongAdder();
+    public static int count = 0;
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();
@@ -46,8 +45,8 @@ public class CountExample3 {
     }
 
     private synchronized static void add() {
-        //count++;
+        count++;
         //count.incrementAndGet();
-        count.increment();
+        //count.increment();
     }
 }

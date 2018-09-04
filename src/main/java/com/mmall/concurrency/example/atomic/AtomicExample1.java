@@ -22,7 +22,7 @@ public class AtomicExample1 {
     public static AtomicInteger count = new AtomicInteger(0);
 
     public static void main(String[] args) throws Exception {
-        ExecutorService executorService = Executors.newCachedThreadPool();
+        ExecutorService executorService = Executors.newCachedThreadPool();       //创建线程池
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);
         for (int i = 0; i < clientTotal ; i++) {
